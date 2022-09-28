@@ -38,3 +38,12 @@ vim.opt.fillchars.eob=" "
 vim.opt.shortmess:append "c"
 vim.opt.whichwrap:append("<,>,[,],h,l")
 vim.opt.iskeyword:append("-")
+
+------------------
+-- Memory, CPU ---
+------------------
+vim.opt.hidden = true           -- Enable background buffers
+vim.opt.history = 100           -- Remember N lines in history
+vim.opt.lazyredraw = true       -- Faster scrolling
+vim.opt.synmaxcol = 240         -- Max column for syntax highlight
+vim.opt.updatetime = 700        -- ms to wait for trigger an event
