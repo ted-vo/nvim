@@ -1,49 +1,82 @@
-vim.opt.backup = false                          -- creates a backup file
-vim.opt.clipboard = "unnamedplus"               -- allows neovim to access the system clipboard
-vim.opt.cmdheight = 1                           -- more space in the neovim command line for displaying messages
-vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
-vim.opt.conceallevel = 0                        -- so that `` is visible in markdown files
-vim.opt.fileencoding = "utf-8"                  -- the encoding written to a file
-vim.opt.hlsearch = true                         -- highlight all matches on previous search pattern
-vim.opt.ignorecase = true                       -- ignore case in search patterns
-vim.opt.mouse = "a"                             -- allow the mouse to be used in neovim
-vim.opt.pumheight = 10                          -- pop up menu height
-vim.opt.showmode = false                        -- we don't need to see things like -- INSERT -- anymore
-vim.opt.showtabline = 0                         -- always show tabs
-vim.opt.smartcase = true                        -- smart case
-vim.opt.smartindent = true                      -- make indenting smarter again
-vim.opt.splitbelow = true                       -- force all horizontal splits to go below current window
-vim.opt.splitright = true                       -- force all vertical splits to go to the right of current window
-vim.opt.swapfile = false                        -- creates a swapfile
-vim.opt.termguicolors = true                    -- set term gui colors (most terminals support this)
-vim.opt.timeoutlen = 1000                       -- time to wait for a mapped sequence to complete (in milliseconds)
-vim.opt.undofile = true                         -- enable persistent undo
-vim.opt.updatetime = 300                        -- faster completion (4000ms default)
-vim.opt.writebackup = false                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
-vim.opt.expandtab = true                        -- convert tabs to spaces
-vim.opt.shiftwidth = 2                          -- the number of spaces inserted for each indentation
-vim.opt.tabstop = 2                             -- insert 2 spaces for a tab
-vim.opt.cursorline = true                       -- highlight the current line
-vim.opt.number = true                           -- set numbered lines
-vim.opt.laststatus = 3
-vim.opt.showcmd = false
-vim.opt.ruler = false
-vim.opt.numberwidth = 4                         -- set number column width to 2 {default 4}
-vim.opt.signcolumn = "yes"                      -- always show the sign column, otherwise it would shift the text each time
-vim.opt.wrap = false                            -- display lines as one long line
-vim.opt.scrolloff = 8                           -- is one of my fav
-vim.opt.sidescrolloff = 8
-vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
-vim.opt.fillchars.eob=" "
-vim.opt.shortmess:append "c"
-vim.opt.whichwrap:append("<,>,[,],h,l")
-vim.opt.iskeyword:append("-")
+-----------------------------------------------------------
+-- General Neovim settings and configuration
+-----------------------------------------------------------
 
-------------------
--- Memory, CPU ---
-------------------
-vim.opt.hidden = true           -- Enable background buffers
-vim.opt.history = 100           -- Remember N lines in history
-vim.opt.lazyredraw = true       -- Faster scrolling
-vim.opt.synmaxcol = 240         -- Max column for syntax highlight
-vim.opt.updatetime = 700        -- ms to wait for trigger an event
+-- Default options are not included
+-- See: https://neovim.io/doc/user/vim_diff.html
+-- [2] Defaults - *nvim-defaults*
+
+local set = vim.opt   -- Set options (global/buffer/windows-scoped)
+
+-----------------------------------------------------------
+-- General
+-----------------------------------------------------------
+set.mouse = 'a'                       -- Enable mouse support
+set.clipboard = 'unnamedplus'         -- Copy/paste to system clipboard
+set.swapfile = false                  -- Don't use swapfile
+set.completeopt = 'menuone,noinsert,noselect'  -- Autocomplete setions
+set.timeoutlen = 500
+
+-----------------------------------------------------------
+-- Neovim UI
+-----------------------------------------------------------
+set.number = true             -- Show line number
+set.relativenumber = true     -- Set relative line number
+set.showmatch = true          -- Highlight matching parenthesis
+set.foldmethod = 'marker'     -- Enable folding (default 'foldmarker')
+set.colorcolumn = '200'        -- Line lenght marker at 80 columns
+set.splitright = true         -- Vertical split to the right
+set.splitbelow = true         -- Horizontal split to the bottom
+set.ignorecase = true         -- Ignore case letters when search
+set.smartcase = true          -- Ignore lowercase for the whole pattern
+set.linebreak = true          -- Wrap on word boundary
+set.laststatus=3              -- Set global statusline
+set.termguicolors = true      -- Set term gui colors (most terminals support this)
+set.cursorline = true         -- Uighlight the current line
+set.wrap = false              -- Display lines as one long line
+set.scrolloff = 8             -- Is one of my fav set.sidescrolloff = 8
+set.signcolumn = "yes"        -- Always show the sign column, otherwise it would shift the text each time
+set.guifont = "monospace:h17" -- The font used in graphical neovim applications
+set.numberwidth = 4           -- Set number column width to 2 {default 4}
+
+set.backup = false                          -- creates a backup file
+set.cmdheight = 1                           -- more space in the neovim command line for displaying messages
+set.conceallevel = 0                        -- so that `` is visible in markdown files
+set.fileencoding = "utf-8"                  -- the encoding written to a file
+set.hlsearch = true                         -- highlight all matches on previous search pattern
+set.ignorecase = true                       -- ignore case in search patterns
+set.pumheight = 10                          -- pop up menu height
+set.showmode = false                        -- we don't need to see things like -- INSERT -- anymore
+set.showtabline = 0                         -- always show tabs
+set.smartindent = true                      -- make indenting smarter again
+set.timeoutlen = 1000                       -- time to wait for a mapped sequence to complete (in milliseconds)
+set.undofile = true                         -- enable persistent undo
+set.updatetime = 300                        -- faster completion (4000ms default)
+set.writebackup = false                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
+set.expandtab = true                        -- convert tabs to spaces
+set.shiftwidth = 2                          -- the number of spaces inserted for each indentation
+set.tabstop = 2                             -- insert 2 spaces for a tab
+set.showcmd = false
+set.ruler = false
+set.fillchars.eob=" "
+set.shortmess:append "c"
+set.whichwrap:append("<,>,[,],h,l")
+set.iskeyword:append("-")
+
+-----------------------------------------------------------
+-- Tabs, indent
+-----------------------------------------------------------
+set.expandtab = true        -- Use spaces instead of tabs
+set.shiftwidth = 2          -- Shift 2 spaces when tab
+set.tabstop = 2             -- 1 tab == 2 spaces
+set.smartindent = true      -- Autoindent new lines
+
+-----------------------------------------------------------
+-- Memory, CPU
+-----------------------------------------------------------
+set.hidden = true           -- Enable background buffers
+set.history = 100           -- Remember N lines in history
+set.lazyredraw = true       -- Faster scrolling
+set.synmaxcol = 240         -- Max column for syntax highlight
+set.updatetime = 700        -- ms to wait for trigger an event
+
