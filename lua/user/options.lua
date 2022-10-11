@@ -3,9 +3,7 @@
 -----------------------------------------------------------
 
 -- Default options are not included
--- See: https://neovim.io/doc/user/vim_diff.html
--- [2] Defaults - *nvim-defaults*
-
+-- See: https://neovim.io/doc/user/vim_diff.html [2] Defaults - *nvim-defaults*
 local set = vim.opt -- Set options (global/buffer/windows-scoped)
 
 -----------------------------------------------------------
