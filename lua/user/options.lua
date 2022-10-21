@@ -52,7 +52,6 @@ set.undofile = true -- enable persistent undo
 set.updatetime = 300 -- faster completion (4000ms default)
 set.writebackup = false -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 set.expandtab = true -- convert tabs to spaces
-set.shiftwidth = 2 -- the number of spaces inserted for each indentation
 set.tabstop = 2 -- insert 2 spaces for a tab
 set.showcmd = false
 set.ruler = false
