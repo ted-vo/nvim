@@ -2,7 +2,6 @@ local status_ok, which_key = pcall(require, "which-key")
 if not status_ok then
 	return
 end
-
 local setup = {
 	plugins = {
 		marks = true, -- shows a list of your marks on ' and `
@@ -84,6 +83,20 @@ local mappings = {
 		"<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
 		"Buffers",
 	},
+
+	d = {
+		name = "Debug",
+		b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
+		c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
+		i = { "<cmd>lua require'dap'.step_into()<cr>", "Step into" },
+		o = { "<cmd>lua require'dap'.step_out()<cr>", "Step over" },
+		O = { "<cmd>lua require'dap'.step_out()<cr>", "Step out" },
+		e = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Repl Toggle" },
+		l = { "<cmd>lua require'dap'.run_last()<cr>", "Run last" },
+		u = { "<cmd>lua require'dapui'.toggle()<cr>", "UI Toggle" },
+		t = { "<cmd>lua require'dap'.terminate()<cr>", "Terminal" },
+	},
+
 	["e"] = { "<cmd>NvimTreeToggle<cr>", "Explorer" },
 	["w"] = { "<cmd>w!<CR>", "Save" },
 	["q"] = { "<cmd>q!<CR>", "Quit" },
@@ -141,7 +154,7 @@ local mappings = {
 		},
 		f = { "<cmd>lua vim.lsp.buf.format{async=true}<cr>", "Format" },
 		i = { "<cmd>LspInfo<cr>", "Info" },
-		I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+		I = { "<cmd>Mason<cr>", "Installer Info" },
 		j = {
 			"<cmd>lua vim.lsp.diagnostic.goto_next()<CR>",
 			"Next Diagnostic",
