@@ -1,0 +1,10 @@
+{
+  "diagnostics.globals": [
+    "vim",
+    "packer",
+    "status_ok"
+  ],
+  "diagnostics.disable": [
+    "unused-local"
+  ]
+}
