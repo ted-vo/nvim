@@ -1,6 +1,6 @@
 local M = {
 	"wfxr/minimap.vim",
-	run = "cargo install --locked code-minimap",
+	-- cmd = "cargo install --locked code-minimap",
 	event = { "VimEnter", "InsertEnter", "BufReadPre", "BufAdd", "BufNew", "BufReadPost" },
 }
 

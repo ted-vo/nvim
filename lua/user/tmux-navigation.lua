@@ -1,6 +1,6 @@
 local M = {
 	"alexghergh/nvim-tmux-navigation",
-	event = { "VimEnter", "InsertEnter", "BufReadPre", "BufAdd", "BufNew", "BufReadPost" },
+	event = { "BufReadPre", "BufAdd", "BufNew", "BufReadPost" },
 }
 
 function M.config()

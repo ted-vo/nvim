@@ -1,6 +1,6 @@
 local M = {
 	"akinsho/bufferline.nvim",
-	commit = "c7492a76ce8218e3335f027af44930576b561013",
+	version = "*",
 	event = { "BufReadPre", "BufAdd", "BufNew", "BufReadPost" },
 	dependencies = {
 		{
@@ -14,6 +14,7 @@ local M = {
 }
 
 function M.config()
+	vim.opt.termguicolors = true
 	require("bufferline").setup({
 		options = {
 			close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
@@ -25,7 +26,7 @@ function M.config()
 					text = function()
 						return vim.fn.getcwd()
 					end,
-					-- highlight = "Directory",
+					highlight = "Directory",
 					text_align = "left",
 				},
 			},
@@ -37,7 +38,6 @@ function M.config()
 	local keymap = vim.keymap.set
 	-- Silent keymap option
 	local opts = { silent = true, noremap = true }
-	vim.opt.termguicolors = true
 	keymap("n", "<leader>1", "<CMD>BufferLineGoToBuffer 1<CR>", opts)
 	keymap("n", "<leader>2", "<CMD>BufferLineGoToBuffer 2<CR>", opts)
 	keymap("n", "<leader>3", "<CMD>BufferLineGoToBuffer 3<CR>", opts)
