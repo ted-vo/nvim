@@ -23,9 +23,10 @@ function M.config()
 				{
 					filetype = "NvimTree",
 					padding = 1,
-					text = function()
-						return vim.fn.getcwd()
-					end,
+					-- text = function()
+					-- 	return vim.fn.getcwd()
+					-- end,
+					text = "File Explore",
 					highlight = "Directory",
 					text_align = "left",
 				},

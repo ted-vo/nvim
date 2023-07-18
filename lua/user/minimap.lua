@@ -1,12 +1,10 @@
 local M = {
 	"wfxr/minimap.vim",
 	-- cmd = "cargo install --locked code-minimap",
-	event = { "VimEnter", "InsertEnter", "BufReadPre", "BufAdd", "BufNew", "BufReadPost" },
+	event = "VeryLazy",
 }
 
 function M.config()
-	require("minimap")
-
 	local set = vim.g
 
 	set.minimap_width = 20
