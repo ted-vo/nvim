@@ -121,7 +121,7 @@ function M.config()
 			b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle Breakpoint" },
 			c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
 			i = { "<cmd>lua require'dap'.step_into()<cr>", "Step into" },
-			o = { "<cmd>lua require'dap'.step_out()<cr>", "Step over" },
+			o = { "<cmd>lua require'dap'.step_over()<cr>", "Step over" },
 			O = { "<cmd>lua require'dap'.step_out()<cr>", "Step out" },
 			e = { "<cmd>lua require'dap'.repl.toggle()<cr>", "Repl Toggle" },
 			l = { "<cmd>lua require'dap'.run_last()<cr>", "Run last" },

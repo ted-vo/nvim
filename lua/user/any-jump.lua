@@ -1,9 +1,9 @@
 local M = {
-	"pechorin/any-jump.vim",
+  "pechorin/any-jump.vim",
 }
 
 function M.config()
-	require("any-jump")
+  require("any-jump")
 end
 
 return M
