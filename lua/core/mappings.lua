@@ -16,6 +16,9 @@ M.general = {
   },
 
   n = {
+    --- bashboard
+    ["<leader>a"] = { "<cmd> Nvdash <cr>", "Dashboard", opts = { silent = true } },
+
     ["<Esc>"] = { ":noh <CR>", "Clear highlights" },
     -- switch between windows
     ["<C-h>"] = { "<C-w>h", "Window left" },
@@ -52,6 +55,9 @@ M.general = {
       end,
       "LSP formatting",
     },
+
+    --- projects
+    ["<leader>p"] = { "<cmd> Telescope projects <cr>", opts = { silent = true } },
   },
 
   t = {

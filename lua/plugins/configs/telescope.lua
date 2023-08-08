@@ -11,7 +11,7 @@ local options = {
       "--smart-case",
     },
     prompt_prefix = "   ",
-    selection_caret = "  ",
+    selection_caret = "  ",
     entry_prefix = "  ",
     initial_mode = "insert",
     selection_strategy = "reset",
@@ -33,7 +33,7 @@ local options = {
     file_sorter = require("telescope.sorters").get_fuzzy_file,
     file_ignore_patterns = { "node_modules" },
     generic_sorter = require("telescope.sorters").get_generic_fuzzy_sorter,
-    path_display = { "truncate" },
+    path_display = { "smart" },
     winblend = 0,
     border = {},
     borderchars = { "─", "│", "─", "│", "╭", "╮", "╯", "╰" },
@@ -49,7 +49,7 @@ local options = {
     },
   },
 
-  extensions_list = { "themes", "terms" },
+  extensions_list = { "themes", "terms", "projects" },
 }
 
 return options
