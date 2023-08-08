@@ -41,6 +41,7 @@ opt.splitright = true
 opt.termguicolors = true
 opt.timeoutlen = 400
 opt.undofile = true
+opt.foldmethod = "manual"
 
 -- interval for writing swap file to disk, also used by gitsigns
 opt.updatetime = 250
@@ -75,7 +76,7 @@ autocmd("FileType", {
 autocmd("BufWritePost", {
   pattern = vim.tbl_map(function(path)
     return vim.fs.normalize(vim.loop.fs_realpath(path))
-  end, vim.fn.glob(vim.fn.stdpath "config" .. "/lua/custom/**/*.lua", true, true, true)),
+  end, vim.fn.glob(vim.fn.stdpath "config" .. "/lua/user/**/*.lua", true, true, true)),
   group = vim.api.nvim_create_augroup("ReloadNvChad", {}),
 
   callback = function(opts)
@@ -85,7 +86,7 @@ autocmd("BufWritePost", {
 
     require("plenary.reload").reload_module "base46"
     require("plenary.reload").reload_module(module)
-    require("plenary.reload").reload_module "custom.chadrc"
+    require("plenary.reload").reload_module "user.chadrc"
 
     config = require("core.utils").load_config()
 
