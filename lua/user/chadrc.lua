@@ -6,12 +6,12 @@ local highlights = require "user.highlights"
 
 M.ui = {
   theme = "palenight",
-  theme_toggle = { "palenight", "onedark" },
+  theme_toggle = { "palenight", "github_light" },
 
   hl_override = highlights.override,
   hl_add = highlights.add,
 
-  transparency = true,
+  transparency = false,
 }
 
 M.plugins = "user.plugins"

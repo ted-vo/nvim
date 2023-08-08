@@ -46,6 +46,23 @@ local plugins = {
     end,
   },
 
+  {
+    "alexghergh/nvim-tmux-navigation",
+    event = { "BufReadPre", "BufAdd", "BufNew", "BufReadPost" },
+    config = function()
+      require "user.configs.tmux-navigation"
+    end,
+  },
+
+  {
+    "wfxr/minimap.vim",
+    -- cmd = "cargo install --locked code-minimap",
+    event = "VeryLazy",
+    config = function()
+      require "user.configs.minimap"
+    end,
+  },
+
   -- To make a plugin not be loaded
   -- {
   --   "NvChad/nvim-colorizer.lua",
