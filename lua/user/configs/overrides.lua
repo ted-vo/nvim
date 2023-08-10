@@ -2,18 +2,44 @@ local M = {}
 
 M.treesitter = {
   ensure_installed = {
-    "vim",
+    --- general
     "lua",
+    "comment",
+    "markdown",
+    "markdown_inline",
+    "vim",
+    "json",
+    "http",
+    "make",
+    "toml",
+    "yaml",
+
+    --- git family
+    "diff",
+    "git_rebase",
+    "gitcommit",
+    "gitignore",
+
+    --- go family
+    "go",
+    "gomod",
+    "gosum",
+    "gowork",
+
+    --- otherwise
+    "c",
+    "css",
     "html",
     "css",
     "javascript",
     "typescript",
     "tsx",
-    "c",
-    "go",
     "bash",
-    "markdown",
-    "markdown_inline",
+    "dockerfile",
+    "dot",
+    "terraform",
+    "ruby",
+    "python",
   },
   indent = {
     enable = true,
@@ -24,6 +50,7 @@ M.treesitter = {
 }
 
 M.mason = {
+  --- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
   ensure_installed = {
     -- lua stuff
     "lua-language-server",
@@ -41,7 +68,6 @@ M.mason = {
 
     -- go stuff
     "gopls",
-    "golangci_lint_ls",
     "goimports",
 
     -- shell stuff
@@ -50,6 +76,9 @@ M.mason = {
 
     -- config files stuff
     "yaml-language-server",
+
+    -- terraform
+    "terraform-ls",
   },
 }
 

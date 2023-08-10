@@ -10,7 +10,6 @@ local sources = {
       "html",
       "markdown",
       "css",
-      "yaml",
       "json",
       "javascript",
       "markdown",
