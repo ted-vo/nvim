@@ -57,7 +57,7 @@ M.general = {
     },
 
     --- projects
-    ["<leader>p"] = { "<cmd> Telescope projects <cr>", opts = { silent = true } },
+    ["<leader>pl"] = { "<cmd> Telescope projects <cr>", opts = { silent = true } },
   },
 
   t = {
@@ -292,7 +292,7 @@ M.nvterm = {
 
   t = {
     -- toggle in terminal mode
-    ["<C-i>"] = {
+    ["<A-i>"] = {
       function()
         require("nvterm.terminal").toggle "float"
       end,
