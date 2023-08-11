@@ -12,9 +12,12 @@ local sources = {
       "css",
       "json",
       "javascript",
+      "jsx",
       "markdown",
       "scss",
       "typescript",
+      "vue",
+      "yaml",
     },
   }, -- so prettier works only on these filetypes
 
