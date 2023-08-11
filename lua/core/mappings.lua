@@ -55,9 +55,6 @@ M.general = {
       end,
       "LSP formatting",
     },
-
-    --- projects
-    ["<leader>pl"] = { "<cmd> Telescope projects <cr>", opts = { silent = true } },
   },
 
   t = {
@@ -284,6 +281,12 @@ M.telescope = {
     ["<leader>th"] = { "<cmd> Telescope themes <CR>", "Nvchad themes" },
 
     ["<leader>ma"] = { "<cmd> Telescope marks <CR>", "telescope bookmarks" },
+
+    --- projects
+    ["<leader>pl"] = { "<cmd> Telescope projects <cr>" },
+
+    --- diagnostic
+    ["<leader>di"] = { "<cmd> Telescope diagnostics <cr>" },
   },
 }
 
@@ -451,7 +454,7 @@ M.gitsigns = {
       "Blame line",
     },
 
-    ["<leader>td"] = {
+    ["<leader>tD"] = {
       function()
         require("gitsigns").toggle_deleted()
       end,
