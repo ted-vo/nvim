@@ -4,6 +4,7 @@ local capabilities = require("plugins.configs.lspconfig").capabilities
 local lspconfig = require "lspconfig"
 
 -- if you just want default config for the servers then put them in a table
+--- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 local servers = {
   "html",
   "cssls",
@@ -12,6 +13,9 @@ local servers = {
   "bashls",
   "yamlls",
   "terraformls",
+  "lua_ls",
+  "gopls",
+  "golangci_lint_ls",
 }
 
 for _, lsp in ipairs(servers) do

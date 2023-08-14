@@ -50,7 +50,6 @@ M.treesitter = {
 }
 
 M.mason = {
-  --- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
   ensure_installed = {
     -- lua stuff
     "lua-language-server",
@@ -69,6 +68,7 @@ M.mason = {
     -- go stuff
     "gopls",
     "goimports",
+    "golangci-lint-langserver",
 
     -- shell stuff
     "bash-language-server",
