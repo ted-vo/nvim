@@ -13,7 +13,7 @@ local default_plugins = {
   },
 
   {
-    "ted-vo/nvchad-ui",
+    "ted-vo/nvim-ui",
     branch = "v2.0",
     lazy = false,
   },
