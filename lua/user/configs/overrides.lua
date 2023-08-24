@@ -62,8 +62,8 @@ M.mason = {
     "prettier",
 
     -- c/cpp stuff
-    -- "clangd",
-    -- "clang-format",
+    "clangd",
+    "clang-format",
 
     -- go stuff
     "gopls",
