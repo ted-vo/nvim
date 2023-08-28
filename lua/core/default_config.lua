@@ -10,8 +10,8 @@ M.ui = {
   hl_add = {},
   hl_override = {},
   changed_themes = {},
-  theme_toggle = { "onedark", "one_light" },
-  theme = "onedark", -- default theme
+  theme_toggle = { "yoru", "one_light" },
+  theme = "yoru", -- default theme
   transparency = false,
   lsp_semantic_tokens = true, -- needs nvim v0.9, just adds highlight groups for lsp semantic tokens
 
@@ -51,7 +51,6 @@ M.ui = {
     load_on_startup = true,
 
     header = {
-      [[                                                  ]],
       [[███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗]],
       [[████╗  ██║██╔════╝██╔═══██╗██║   ██║██║████╗ ████║]],
       [[██╔██╗ ██║█████╗  ██║   ██║██║   ██║██║██╔████╔██║]],
@@ -59,15 +58,9 @@ M.ui = {
       [[██║ ╚████║███████╗╚██████╔╝ ╚████╔╝ ██║██║ ╚═╝ ██║]],
       [[╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝]],
       [[                                                  ]],
-      [[             ____ ____ ____ ____ ____             ]],
-      [[            ||T |||E |||D |||V |||O ||            ]],
-      [[            ||__|||__|||__|||__|||__||            ]],
-      [[            |/__\|/__\|/__\|/__\|/__\|            ]],
-      [[                                                  ]],
       [[                   =                          ]],
       [[                   =                           ]],
       [[                   =                       ]],
-      [[                                                  ]],
     },
 
     buttons = {
@@ -76,7 +69,7 @@ M.ui = {
       { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
       { "  Bookmarks", "Spc m a", "Telescope marks" },
       { "  Projects", "Spc p l", "Telescope projects" },
-      { "  Themes", "Spc t h", "Telescope themes" },
+      { "  Themes", "Spc t s", "Telescope themes" },
       { "  Mappings", "Spc c h", "NvCheatsheet" },
       { "  Quit", "Spc q a", "qa" },
     },

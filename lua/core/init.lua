@@ -109,6 +109,13 @@ autocmd("BufWritePost", {
   end,
 })
 
+-- Highlight Yanked Text
+autocmd({ "TextYankPost" }, {
+  callback = function()
+    vim.highlight.on_yank { higroup = "Visual", timeout = 200 }
+  end,
+})
+
 -------------------------------------- commands ------------------------------------------
 local new_cmd = vim.api.nvim_create_user_command
 
