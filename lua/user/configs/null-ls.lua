@@ -25,13 +25,16 @@ local sources = {
   b.formatting.stylua,
 
   -- cpp
-  -- b.formatting.clang_format,
+  b.formatting.clang_format,
 
   -- sh
   b.formatting.shfmt,
 
   -- go
   b.formatting.goimports,
+
+  -- terraform
+  b.formatting.terraform_fmt,
 }
 
 null_ls.setup {
