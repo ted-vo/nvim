@@ -35,6 +35,9 @@ local sources = {
 
   -- terraform
   b.formatting.terraform_fmt,
+
+  -- json
+  b.formatting.jq,
 }
 
 null_ls.setup {
