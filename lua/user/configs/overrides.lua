@@ -79,6 +79,11 @@ M.mason = {
 
     -- terraform
     "terraform-ls",
+
+    -- python
+    "python-lsp-server",
+    "autoflake",
+    "pyflakes",
   },
 }
 
