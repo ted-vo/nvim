@@ -38,6 +38,9 @@ local sources = {
 
   -- json
   b.formatting.jq,
+
+  -- python
+  b.formatting.autoflake,
 }
 
 null_ls.setup {
