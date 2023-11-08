@@ -16,6 +16,7 @@ local servers = {
   "lua_ls",
   "gopls",
   "golangci_lint_ls",
+  "pylsp",
 }
 
 for _, lsp in ipairs(servers) do
