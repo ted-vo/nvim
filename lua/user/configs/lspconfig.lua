@@ -11,7 +11,7 @@ local servers = {
   "tsserver",
   "clangd",
   "bashls",
-  "yamlls",
+  -- "yamlls",
   "terraformls",
   "lua_ls",
   "gopls",
@@ -28,3 +28,12 @@ end
 
 --
 -- lspconfig.pyright.setup { blabla}
+lspconfig.yamlls.setup {
+  on_attach = on_attach,
+  capabilities = capabilities,
+  settings = {
+    yaml = {
+      customTags = { "!reference sequence" },
+    },
+  },
+}
