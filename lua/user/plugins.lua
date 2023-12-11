@@ -50,7 +50,6 @@ local plugins = {
       require("better_escape").setup()
     end,
   },
-
   {
     "alexghergh/nvim-tmux-navigation",
     event = { "BufReadPre", "BufAdd", "BufNew", "BufReadPost" },
@@ -58,13 +57,19 @@ local plugins = {
       require "user.configs.tmux-navigation"
     end,
   },
-
   {
     "wfxr/minimap.vim",
     -- cmd = "cargo install --locked code-minimap",
     event = "VeryLazy",
     config = function()
       require "user.configs.minimap"
+    end,
+  },
+  {
+    "nvim-pack/nvim-spectre",
+    event = "VeryLazy",
+    config = function()
+      require "user.configs.nvim-spectre"
     end,
   },
 
