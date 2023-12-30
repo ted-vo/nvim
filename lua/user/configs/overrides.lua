@@ -40,6 +40,7 @@ M.treesitter = {
     "terraform",
     "ruby",
     "python",
+    "sql",
   },
   indent = {
     enable = true,
@@ -84,6 +85,9 @@ M.mason = {
     "python-lsp-server",
     "autoflake",
     "pyflakes",
+
+    -- sql
+    "sqlls",
   },
 }
 

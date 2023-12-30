@@ -23,24 +23,20 @@ local sources = {
 
   -- Lua
   b.formatting.stylua,
-
   -- cpp
   b.formatting.clang_format,
-
   -- sh
   b.formatting.shfmt,
-
   -- go
   b.formatting.goimports,
-
   -- terraform
   b.formatting.terraform_fmt,
-
   -- json
   b.formatting.jq,
-
   -- python
   b.formatting.autoflake,
+  -- sql
+  b.formatting.sqlfmt,
 }
 
 null_ls.setup {
