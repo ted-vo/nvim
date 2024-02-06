@@ -72,6 +72,13 @@ local plugins = {
       require "user.configs.nvim-spectre"
     end,
   },
+  {
+    "towolf/vim-helm",
+    ft = "helm",
+    lazy = false,
+    event = { "BufReadPre" },
+    config = function() end,
+  },
 
   -- To make a plugin not be loaded
   -- {

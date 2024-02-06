@@ -30,11 +30,20 @@ end
 --
 -- lspconfig.pyright.setup { blabla}
 lspconfig.yamlls.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
   settings = {
     yaml = {
       customTags = { "!reference sequence" },
+    },
+  },
+}
+
+lspconfig.helm_ls.setup {
+  settings = {
+    ["helm-ls"] = {
+      yamlls = {
+        diagnosticsLimit = 0,
+        path = "yaml-language-server",
+      },
     },
   },
 }

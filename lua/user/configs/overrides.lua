@@ -78,6 +78,9 @@ M.mason = {
     -- config files stuff
     "yaml-language-server",
 
+    -- helm
+    "helm-ls",
+
     -- terraform
     "terraform-ls",
 
