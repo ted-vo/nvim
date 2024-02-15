@@ -108,6 +108,10 @@ M.nvimtree = {
       },
     },
   },
+
+  filters = {
+    dotfiles = true,
+  },
 }
 
 --- NVTerm
