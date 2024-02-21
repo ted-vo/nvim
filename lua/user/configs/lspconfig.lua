@@ -43,6 +43,9 @@ lspconfig.helm_ls.setup {
       yamlls = {
         diagnosticsLimit = 0,
         path = "yaml-language-server",
+        schemas = {
+          kubernetes = "helm-charts/**/templates/**",
+        },
       },
     },
   },
