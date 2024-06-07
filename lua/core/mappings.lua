@@ -320,20 +320,6 @@ M.nvterm = {
       "Toggle floating term",
     },
 
-    ["<leader>h"] = {
-      function()
-        require("nvterm.terminal").toggle "horizontal"
-      end,
-      "Toggle horizontal term",
-    },
-
-    ["<leader>v"] = {
-      function()
-        require("nvterm.terminal").toggle "vertical"
-      end,
-      "Toggle vertical term",
-    },
-
     -- new
     ["<leader>th"] = {
       function()
