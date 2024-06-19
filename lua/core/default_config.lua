@@ -14,7 +14,6 @@ M.ui = {
   theme = "catppuccin", -- default theme
   transparency = false,
   lsp_semantic_tokens = true, -- needs nvim v0.9, just adds highlight groups for lsp semantic tokens
-
   -- https://github.com/NvChad/base46/tree/v2.0/lua/base46/extended_integrations
   extended_integrations = {}, -- these aren't compiled by default, ex: "alpha", "notify"
 
@@ -71,7 +70,7 @@ M.ui = {
       { "  Projects", "Spc p l", "Telescope projects" },
       { "  Themes", "Spc t s", "Telescope themes" },
       { "  Mappings", "Spc c h", "NvCheatsheet" },
-      { "  Quit", "Spc q a", "qa" },
+      { "  Quit", "Spc q q", "qq" },
     },
   },
 
