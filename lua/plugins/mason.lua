@@ -11,6 +11,7 @@ return {
         "css-lsp",
         "html-lsp",
         "typescript-language-server",
+        "tailwindcss-language-server",
         "prettier",
 
         -- c/cpp stuff
