@@ -17,11 +17,11 @@ map(
 -- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
 
 -- tabufline
-map("n", "<S-H>", function()
+map("n", "<S-L>", function()
   require("nvchad.tabufline").next()
 end, { desc = "buffer goto next" })
 
-map("n", "<S-L>", function()
+map("n", "<S-H>", function()
   require("nvchad.tabufline").prev()
 end, { desc = "buffer goto prev" })
 
