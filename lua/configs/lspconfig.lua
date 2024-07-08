@@ -18,13 +18,19 @@ local servers = {
   },
   lua_ls = {},
 
+  ast_grep = {},
+
   -- web
   html = {},
   cssls = {},
-  tsserver = {},
+  tsserver = {
+    single_file_support = true,
+  },
+  tailwindcss = {},
 
   --
   terraformls = {},
+
   -- golang
   gopls = {},
   golangci_lint_ls = {},
@@ -37,10 +43,10 @@ local servers = {
 }
 
 -- lsps with default config
-for lsp, opts in ipairs(servers) do
+for name, opts in pairs(servers) do
   opts.on_attach = on_attach
   opts.on_init = on_init
   opts.capabilities = capabilities
 
-  lspconfig[lsp].setup(opts)
+  lspconfig[name].setup(opts)
 end
