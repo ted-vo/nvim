@@ -16,6 +16,7 @@ local servers = {
       },
     },
   },
+  jsonls = {},
   lua_ls = {},
 
   ast_grep = {},
