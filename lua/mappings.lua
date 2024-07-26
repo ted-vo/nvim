@@ -49,3 +49,7 @@ map("n", "<leader>gg", function()
     },
   }
 end, { desc = "Lazygit" })
+
+-- kubeclt
+-- Recommended is to have the same open mapping as your close (```<leader>k```) the plugin for a toggle effect.
+map("n", "<leader>k", '<cmd>lua require("kubectl").open()<cr>', { noremap = true, silent = true })
