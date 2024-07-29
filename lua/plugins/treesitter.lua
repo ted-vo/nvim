@@ -15,6 +15,7 @@ return {
         "make",
         "toml",
         "yaml",
+        "http",
 
         --- git family
         "diff",
