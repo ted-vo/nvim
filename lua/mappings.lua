@@ -52,7 +52,7 @@ end, { desc = "Lazygit" })
 
 -- kubeclt
 -- Recommended is to have the same open mapping as your close (```<leader>k```) the plugin for a toggle effect.
-map("n", "<leader>k", '<cmd>lua require("kubectl").open()<cr>', { noremap = true, silent = true })
+map("n", "<leader>k", '<cmd>lua require("kubectl").open()<cr>', { noremap = true, silent = true, desc = "k8s" })
 
 --- kulalanvim aka http in file
 map("n", "<leader>fk", ":lua require('kulala').jump_prev()<CR>", { noremap = true, silent = true })
