@@ -3,6 +3,10 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ensure_installed = {
+        -- general
+        "masksman",
+        "prettier",
+
         -- lua stuff
         "lua-language-server",
         "stylua",
@@ -12,11 +16,11 @@ return {
         "html-lsp",
         "typescript-language-server",
         "tailwindcss-language-server",
-        "prettier",
 
         -- c/cpp stuff
         "clangd",
         "clang-format",
+        "cmakelang",
 
         -- go stuff
         "gopls",
