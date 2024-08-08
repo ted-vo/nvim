@@ -15,6 +15,7 @@ local options = {
     tf = { "terraform_fmt" },
     javascript = { "prettier" },
     typescript = { "prettier" },
+    markdown = { "prettier" },
   },
 
   format_on_save = {

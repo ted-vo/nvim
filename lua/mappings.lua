@@ -7,14 +7,13 @@ local map = vim.keymap.set
 map("n", ";", ":", { desc = "CMD enter command mode" })
 map("i", "jk", "<ESC>")
 map("n", "<leader>qq", "<CMD>qa<CR>", { desc = "Quit all", silent = true })
--- map("n", "<leader>pl", "<CMD>Telescope project<CR>", { desc = "Project management", silent = true })
 map(
   "n",
   "<leader>pl",
   ":lua require'telescope'.extensions.project.project{ display_type = 'full' }<CR>",
   { desc = "Project management", silent = true }
 )
--- map({ "n", "i", "v" }, "<C-s>", "<cmd> w <cr>")
+map("n", "<leader>n", "<CMD>NvimTreeToggle<CR>", { desc = "Toggle NvimTree", silent = true })
 
 -- tabufline
 map("n", "<S-L>", function()

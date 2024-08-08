@@ -29,8 +29,12 @@ return {
         "gosum",
         "gowork",
 
-        --- otherwise
+        --- c/cpp
         "c",
+        "cpp",
+        "cmake",
+
+        --- otherwise
         "css",
         "html",
         "css",
