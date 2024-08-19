@@ -13,7 +13,6 @@ map(
   ":lua require'telescope'.extensions.project.project{ display_type = 'full' }<CR>",
   { desc = "Project management", silent = true }
 )
-map("n", "<leader>n", "<CMD>NvimTreeToggle<CR>", { desc = "Toggle NvimTree", silent = true })
 
 -- tabufline
 map("n", "<S-L>", function()
@@ -43,15 +42,17 @@ map("n", "<leader>gg", function()
     id = "lazygit",
     cmd = "lazygit",
     float_opts = {
-      width = 0.6,
-      height = 0.8,
+      width = 1,
+      height = 1,
+      row = 50,
+      col = 50,
     },
   }
 end, { desc = "Lazygit" })
 
 -- kubeclt
 -- Recommended is to have the same open mapping as your close (```<leader>k```) the plugin for a toggle effect.
-map("n", "<leader>k", '<cmd>lua require("kubectl").open()<cr>', { noremap = true, silent = true, desc = "k8s" })
+map("n", "<leader>kk", '<cmd>lua require("kubectl").open()<cr>', { noremap = true, silent = true, desc = "k8s" })
 
 --- kulalanvim aka http in file
 map("n", "<leader>fk", ":lua require('kulala').jump_prev()<CR>", { noremap = true, silent = true })

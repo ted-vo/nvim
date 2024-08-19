@@ -42,14 +42,13 @@ M.ui = {
   },
 
   term = {
-    hl = "Normal:term,WinSeparator:WinSeparator",
-    sizes = { sp = 0.4, vsp = 0.4 },
+    -- hl = "Normal:term,WinSeparator:WinSeparator",
     float = {
       relative = "editor",
-      row = 0.3,
-      col = 0.25,
-      width = 0.5,
-      height = 0.4,
+      row = 0.1,
+      col = 0.045,
+      width = 0.9,
+      height = 0.8,
       border = "single",
     },
   },
