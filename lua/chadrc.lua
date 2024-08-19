@@ -3,9 +3,13 @@
 
 local M = {}
 
+M.base46 = {
+  theme = "catppuccin",
+  transparency = false,
+}
+
 M.ui = {
   ------------------------------- base46 -------------------------------------
-  theme = "catppuccin",
   telescope = { style = "bordered" },
 
   ------------------------------- nvchad_ui modules -----------------------------
