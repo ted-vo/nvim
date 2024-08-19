@@ -24,9 +24,17 @@ return {
     init = function()
       vim.opt.wrap = false -- Recommended
       vim.opt.sidescrolloff = 36 -- It's recommended to set a large value
+
       ---@type Neominimap.UserConfig
       vim.g.neominimap = {
         auto_enable = true,
+
+        buf_filter = function(bufnr)
+          local line_count = vim.api.nvim_buf_line_count(bufnr)
+          return line_count < 4096
+        end,
+
+        window_border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
       }
     end,
   },
