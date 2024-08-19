@@ -22,6 +22,14 @@ autocmd({ "BufLeave", "FocusLost", "InsertEnter", "WinLeave" }, {
   end,
 })
 
+-- term
+autocmd("TermOpen", {
+  callback = function()
+    vim.wo.relativenumber = false
+    vim.wo.number = false
+  end,
+})
+
 -- yank highlight
 autocmd("TextYankPost", {
   group = auGroup("highlight_yank", { clear = true }),
@@ -31,10 +39,10 @@ autocmd("TextYankPost", {
   end,
 })
 
-autocmd("VimEnter", {
-  command = ":silent !kitty @ set-spacing padding=0 margin=0",
-})
-
-autocmd("VimLeavePre", {
-  command = ":silent !kitty @ set-spacing padding=20 margin=10",
-})
+-- autocmd("VimEnter", {
+--   command = ":silent !kitty @ set-spacing padding=0 margin=0",
+-- })
+--
+-- autocmd("VimLeavePre", {
+--   command = ":silent !kitty @ set-spacing padding=20 margin=10",
+-- })
