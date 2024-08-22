@@ -1,3 +1,4 @@
+-- Efficient targetted menu built for fast buffer navigation
 return {
   "leath-dub/snipe.nvim",
   event = { "BufReadPre", "BufAdd", "BufNew", "BufReadPost" },
