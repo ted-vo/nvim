@@ -12,13 +12,15 @@ return {
         "vimdoc",
         "json",
         "http",
+        "hurl",
         "make",
         "toml",
         "yaml",
-        "http",
+        "xml",
 
         --- git family
         "diff",
+        "git_config",
         "git_rebase",
         "gitcommit",
         "gitignore",
@@ -34,17 +36,25 @@ return {
         "cpp",
         "cmake",
 
+        -- js family
+        "javascript",
+        "typescript",
+        "tsx",
+
+        -- java family
+        "java",
+        "kotlin",
+        "groovy",
+
         --- otherwise
         "css",
         "html",
         "css",
-        "javascript",
-        "typescript",
-        "tsx",
         "bash",
         "dockerfile",
         "dot",
         "terraform",
+        "helm",
         "ruby",
         "python",
         "sql",
