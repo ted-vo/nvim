@@ -6,7 +6,6 @@ return {
     "nvim-telescope/telescope.nvim",
     opts = function()
       local conf = require "nvchad.configs.telescope"
-      --     --     -- local project_actions = require "telescope._extensions.project.actions"
       table.insert(conf.extensions_list, "project")
       table.insert(conf.extensions, {
         project = {

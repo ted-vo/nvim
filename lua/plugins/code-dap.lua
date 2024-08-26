@@ -1,14 +1,12 @@
 return {
   {
     "mfussenegger/nvim-dap",
-    recommended = true,
     desc = "Debugging support. Requires language specific adapters to be configured. (see lang extras)",
-
     dependencies = {
       {
-        -- Ensure C/C++ debugger is installed
         "williamboman/mason.nvim",
         optional = true,
+        -- Ensure C/C++ debugger is installed
         opts = { ensure_installed = { "codelldb" } },
       },
       "rcarriga/nvim-dap-ui",
