@@ -58,6 +58,7 @@ return {
         "ruby",
         "python",
         "sql",
+        "dart",
       },
     },
   },
