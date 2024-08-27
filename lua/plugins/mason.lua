@@ -22,6 +22,9 @@ return {
         "clang-format",
         "cmakelang",
 
+        -- zig
+        "zls",
+
         -- go stuff
         "gopls",
         "goimports",

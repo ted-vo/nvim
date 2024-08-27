@@ -38,6 +38,9 @@ local servers = {
   gopls = {},
   golangci_lint_ls = {},
 
+  -- zig
+  zls = {},
+
   -- python
   pylsp = {},
 

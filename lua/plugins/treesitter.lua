@@ -59,6 +59,7 @@ return {
         "python",
         "sql",
         "dart",
+        "zig",
       },
     },
   },
