@@ -13,6 +13,8 @@ map(
   ":lua require'telescope'.extensions.project.project{ display_type = 'full' }<CR>",
   { desc = "Project management", silent = true }
 )
+map("n", "<leader>tt", "<CMD>NvimTreeToggle<CR>", { desc = "Toggle nvim tree explore" })
+map("n", "<leader>E", "<CMD>NvimTreeClose<CR>", { desc = "Close nvimtree window" })
 
 -- tabufline
 map("n", "<S-L>", function()
