@@ -26,7 +26,7 @@ return {
       vim.opt.sidescrolloff = 36 -- It's recommended to set a large value
 
       vim.g.neominimap = {
-        auto_enable = true,
+        auto_enable = false,
 
         layout = "split",
 
