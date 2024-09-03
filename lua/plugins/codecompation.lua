@@ -11,7 +11,7 @@ return {
       },
     },
     keys = {
-      { "ca", "<CMD>CodeCompanionAction<CR>", { desc = "CodeCompanionAction" } },
+      { "<leader>ci", "<CMD>CodeCompanionAction<CR>", { desc = "CodeCompanionAction" } },
     },
     opts = {
       strategies = {
