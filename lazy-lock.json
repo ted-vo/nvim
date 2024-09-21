@@ -9,7 +9,7 @@
   },
   "base46": {
     "branch": "v2.5",
-    "commit": "9b81403ef6e29a70bffb7990a0f3dbe5f6095047"
+    "commit": "c6a96941c41fc445cfb52b2019848aca8ea945fa"
   },
   "cmp-buffer": {
     "branch": "main",
@@ -69,7 +69,7 @@
   },
   "lazy.nvim": {
     "branch": "main",
-    "commit": "460e1cd8f24e364d54543a4b0e83f6f4ec1f65fb"
+    "commit": "077102c5bfc578693f12377846d427f49bc50076"
   },
   "markview.nvim": {
     "branch": "main",
@@ -133,7 +133,7 @@
   },
   "nvim-web-devicons": {
     "branch": "master",
-    "commit": "9154484705968658e9aab2b894d1b2a64bf9f83d"
+    "commit": "26220156aafb198b2de6a4cf80c1b120a3768da0"
   },
   "plenary.nvim": {
     "branch": "master",
