@@ -26,7 +26,7 @@ local servers = {
   -- web
   html = {},
   cssls = {},
-  tsserver = {
+  ts_ls = {
     single_file_support = true,
   },
   tailwindcss = {},
@@ -73,11 +73,11 @@ local options = {
 ## Plugins
 
 - Telescope. [nvim-telescope/telescope.nvim](https://github.com/nvim-telescope/telescope.nvim)
-- Telescope project [nvim-telescope/telescope-project.nvim](https://github.com/nvim-telescope/telescope-project.nvim) 
+- Telescope project [nvim-telescope/telescope-project.nvim](https://github.com/nvim-telescope/telescope-project.nvim)
 - Treesitter parser. [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - Tmux navigation. [alexghergh/nvim-tmux-navigation](https://github.com/alexghergh/nvim-tmux-navigation)
-- Markdown preview. [OXY2DEV/markview](https://github.com/OXY2DEV/markview.nvim)  
-- Go to buffers. [leath-dub/snipe.nvim](https://github.com/leath-dub/snipe.nvim)  
+- Markdown preview. [OXY2DEV/markview](https://github.com/OXY2DEV/markview.nvim)
+- Go to buffers. [leath-dub/snipe.nvim](https://github.com/leath-dub/snipe.nvim)
 
 ## Mappings
 
