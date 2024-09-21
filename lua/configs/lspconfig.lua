@@ -26,7 +26,7 @@ local servers = {
   -- web
   html = {},
   cssls = {},
-  tsserver = {
+  ts_ls = {
     single_file_support = true,
   },
   tailwindcss = {},
