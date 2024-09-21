@@ -76,6 +76,8 @@ M.ui = {
       "clangd",
       "clang-format",
       "cmakelang",
+      -- Ensure C/C++ debugger is installed
+      "codelldb",
 
       -- zig
       "zls",

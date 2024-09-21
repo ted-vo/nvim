@@ -6,8 +6,6 @@ return {
       {
         "williamboman/mason.nvim",
         optional = true,
-        -- Ensure C/C++ debugger is installed
-        opts = { ensure_installed = { "codelldb" } },
       },
       "rcarriga/nvim-dap-ui",
       -- virtual text for the debugger
