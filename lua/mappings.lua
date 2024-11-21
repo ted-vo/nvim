@@ -53,3 +53,16 @@ end, { desc = "Lazygit" })
 -- kubeclt
 -- Recommended is to have the same open mapping as your close (```<leader>k```) the plugin for a toggle effect.
 map("n", "<leader>kk", '<cmd>lua require("kubectl").open()<cr>', { noremap = true, silent = true, desc = "k8s" })
+
+-- Keyboard users
+map("n", "<C-t>", function()
+  require("menu").open "default"
+end, {})
+
+-- mouse users + nvimtree users!
+map("n", "<RightMouse>", function()
+  vim.cmd.exec '"normal! \\<RightMouse>"'
+
+  local options = vim.bo.ft == "NvimTree" and "nvimtree" or "default"
+  require("menu").open(options, { mouse = true })
+end, {})
