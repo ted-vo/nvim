@@ -1,6 +1,3 @@
--- This file  needs to have same structure as nvconfig.lua
--- https://github.com/NvChad/NvChad/blob/v2.5/lua/nvconfig.lua
-
 local M = {}
 
 M.base46 = {
@@ -8,49 +5,64 @@ M.base46 = {
   transparency = false,
 }
 
+M.nvdash = {
+  load_on_startup = true,
+
+  header = {
+    "                            ",
+    "     ▄▄         ▄ ▄▄▄▄▄▄▄   ",
+    "   ▄▀███▄     ▄██ █████▀    ",
+    "   ██▄▀███▄   ███           ",
+    "   ███  ▀███▄ ███           ",
+    "   ███    ▀██ ███           ",
+    "   ███      ▀ ███           ",
+    "   ▀██ █████▄▀█▀▄██████▄    ",
+    "     ▀ ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀▀▀   ",
+    "                            ",
+    "     Powered By  eovim    ",
+    "                            ",
+    "         =              ",
+    "         =               ",
+    "         =           ",
+    "                            ",
+  },
+
+  buttons = {
+    { txt = "  Find File", keys = "Spc f f", cmd = "Telescope find_files" },
+    { txt = "󰈚  Recent Files", keys = "Spc f o", cmd = "Telescope oldfiles" },
+    { txt = "󰈭  Find Word", keys = "Spc f w", cmd = "Telescope live_grep" },
+    { txt = "  Bookmarks", keys = "Spc m a", cmd = "Telescope marks" },
+    { txt = "  Projects", keys = "Spc p l", cmd = "Telescope project" },
+    { txt = "  Themes", keys = "Spc t h", cmd = "Telescope themes" },
+    { txt = "  Config", keys = "c", cmd = "" },
+    { txt = "  Mappings", keys = "Spc c h", cmd = "NvCheatsheet" },
+
+    {
+      txt = function()
+        local stats = require("lazy").stats()
+        local ms = math.floor(stats.startuptime) .. " ms"
+        return "  Loaded " .. stats.loaded .. "/" .. stats.count .. " plugins in " .. ms
+      end,
+      hl = "NvDashFooter",
+      no_gap = true,
+    },
+  },
+}
+
 M.ui = {
   ------------------------------- base46 -------------------------------------
   telescope = { style = "bordered" },
 
   ------------------------------- nvchad_ui modules -----------------------------
-  nvdash = {
-    load_on_startup = true,
-
-    header = {
-      "                                                                                         ",
-      " ██╗  ██╗███████╗██╗     ██╗      ██████╗     ██╗    ██╗ ██████╗ ██████╗ ██╗     ██████╗ ",
-      " ██║  ██║██╔════╝██║     ██║     ██╔═══██╗    ██║    ██║██╔═══██╗██╔══██╗██║     ██╔══██╗",
-      " ███████║█████╗  ██║     ██║     ██║   ██║    ██║ █╗ ██║██║   ██║██████╔╝██║     ██║  ██║",
-      " ██╔══██║██╔══╝  ██║     ██║     ██║   ██║    ██║███╗██║██║   ██║██╔══██╗██║     ██║  ██║",
-      " ██║  ██║███████╗███████╗███████╗╚██████╔╝    ╚███╔███╔╝╚██████╔╝██║  ██║███████╗██████╔╝",
-      " ╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝ ╚═════╝      ╚══╝╚══╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚═════╝ ",
-      "                                                                                         ",
-      "                                                                                         ",
-      "                                      =                                              ",
-      "                                      =                                               ",
-      "                                      =                                           ",
-    },
-
-    buttons = {
-      { "  Find File", "Spc f f", "Telescope find_files" },
-      { "󰈚  Recent Files", "Spc f o", "Telescope oldfiles" },
-      { "󰈭  Find Word", "Spc f w", "Telescope live_grep" },
-      { "  Bookmarks", "Spc m a", "Telescope marks" },
-      { "  Projects", "Spc p l", "Telescope project" },
-      { "  Themes", "Spc t h", "Telescope themes" },
-      { "  Config", "c", "" },
-      { "  Mappings", "Spc c h", "NvCheatsheet" },
-    },
-  },
-
   term = {
-    -- hl = "Normal:term,WinSeparator:WinSeparator",
+    winopts = { number = false, relativenumber = false },
+    sizes = { sp = 0.3, vsp = 0.2, ["bo sp"] = 0.3, ["bo vsp"] = 0.2 },
     float = {
       relative = "editor",
-      row = 0.1,
-      col = 0.045,
-      width = 0.9,
-      height = 0.8,
+      row = 0.3,
+      col = 0.25,
+      width = 0.5,
+      height = 0.5,
       border = "single",
     },
   },

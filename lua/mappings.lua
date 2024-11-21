@@ -44,10 +44,8 @@ map("n", "<leader>gg", function()
     id = "lazygit",
     cmd = "lazygit",
     float_opts = {
-      width = 1,
-      height = 1,
-      row = 50,
-      col = 50,
+      width = 0.6,
+      height = 0.6,
     },
   }
 end, { desc = "Lazygit" })
