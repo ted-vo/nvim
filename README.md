@@ -38,6 +38,9 @@ local servers = {
   gopls = {},
   golangci_lint_ls = {},
 
+  -- zig
+  zls = {},
+
   -- python
   pylsp = {},
 
@@ -63,7 +66,7 @@ local options = {
     go = { "goimports", "gofmt" },
     php = { "pretty-php" },
     yaml = { "prettier" },
-    tf = { "terraform_fmt" },
+    terraform = { "terraform_fmt" },
     javascript = { "prettier" },
     typescript = { "prettier" },
   }
