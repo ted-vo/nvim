@@ -12,6 +12,8 @@ local options = {
     go = { "goimports", "gofmt" },
     php = { "pretty-php" },
     yaml = { "prettier" },
+    python = { "isort", "black" },
+    rust = { "rustfmt", lsp_format = "fallback" },
     terraform = { "terraform_fmt" },
     javascript = { "prettier" },
     typescript = { "prettier" },
