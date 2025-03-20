@@ -6,6 +6,7 @@ local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
 
+-- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
 local servers = {
   -- must have
   clangd = require "configs.lang.clangd",
@@ -20,8 +21,15 @@ local servers = {
   jsonls = {},
   lua_ls = {},
 
+  -- util
   ast_grep = {},
   marksman = {},
+
+  -- devops
+  azure_pipelines_ls = {},
+  dockerls = {},
+  docker_compose_language_service = {},
+  terraformls = {},
 
   -- web
   html = {},
@@ -30,9 +38,6 @@ local servers = {
     single_file_support = true,
   },
   tailwindcss = {},
-
-  --
-  terraformls = {},
 
   -- golang
   gopls = {},
