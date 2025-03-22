@@ -29,6 +29,11 @@ map("n", "<S-q>", function()
   require("nvchad.tabufline").close_buffer()
 end, { desc = "buffer close" })
 
+--- tabs
+map("n", "<leader>tp", "<CMD>tabprevious<CR>", { silent = true })
+map("n", "<leader>tn", "<CMD>tabNext<CR>", { silent = true })
+map("n", "<leader>tc", "<CMD>tabclose<CR>", { silent = true })
+
 --- tmux :: nagivation
 map("n", "<C-h>", "<CMD>NvimTmuxNavigateLeft<CR>", { silent = true, noremap = true })
 map("n", "<C-j>", "<CMD>NvimTmuxNavigateDown<CR>", { silent = true, noremap = true })
