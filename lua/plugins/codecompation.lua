@@ -16,19 +16,21 @@ return {
       { "<leader>cic", "<CMD>CodeCompanionChat<CR>", { desc = "CodeCompanionChat" } },
     },
     opts = {
-      chat = {
-        adapter = "gemini",
-      },
-      inline = {
-        adapter = "gemini",
-      },
-      agent = {
-        adapter = "gemini",
-      },
-      adapters = {
-        gemini = function()
-          return require("codecompanion.adapters").extend("gemini", {})
-        end,
+      strategies = {
+        chat = {
+          adapter = "gemini",
+        },
+        inline = {
+          adapter = "gemini",
+        },
+        agent = {
+          adapter = "gemini",
+        },
+        adapters = {
+          gemini = function()
+            return require("codecompanion.adapters").extend("gemini", {})
+          end,
+        },
       },
     },
     config = function(_, opts)
