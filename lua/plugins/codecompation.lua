@@ -11,29 +11,25 @@ return {
       },
     },
     keys = {
-      { "<leader>ci", "<CMD>CodeCompanionAction<CR>", { desc = "CodeCompanionAction" } },
+      { "<leader>cia", "<CMD>CodeCompanionAction<CR>", { desc = "CodeCompanionAction" } },
+      { "<leader>cip", "<CMD>CodeCompanion<CR>", { desc = "CodeCompanion" } },
+      { "<leader>cic", "<CMD>CodeCompanionChat<CR>", { desc = "CodeCompanionChat" } },
     },
     opts = {
-      strategies = {
-        chat = {
-          adapter = "ollama",
-        },
-        inline = {
-          adapter = "ollama",
-        },
-        agent = {
-          adapter = "ollama",
-        },
+      chat = {
+        adapter = "gemini",
       },
-      -- adapters = {
-      --   ollama = function()
-      --     return require("codecompanion.adapters").extend("ollama", {
-      --       env = {
-      --         url = "127.0.0.1:11434",
-      --       },
-      --     })
-      --   end,
-      -- },
+      inline = {
+        adapter = "gemini",
+      },
+      agent = {
+        adapter = "gemini",
+      },
+      adapters = {
+        gemini = function()
+          return require("codecompanion.adapters").extend("gemini", {})
+        end,
+      },
     },
     config = function(_, opts)
       require("codecompanion").setup(opts)
