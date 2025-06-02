@@ -6,7 +6,7 @@ local capabilities = configs.capabilities
 
 local lspconfig = require "lspconfig"
 
--- https://github.com/williamboman/mason-lspconfig.nvim/blob/main/doc/server-mapping.md
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/configs.md
 local servers = {
   -- must have
   clangd = require "configs.lang.clangd",
@@ -26,7 +26,22 @@ local servers = {
   marksman = {},
 
   -- devops
-  azure_pipelines_ls = {},
+  azure_pipelines_ls = {
+    settings = {
+      yaml = {
+        schemas = {
+          ["https://raw.githubusercontent.com/microsoft/azure-pipelines-vscode/master/service-schema.json"] = {
+            "/azure-pipeline*.y*l",
+            "/*.azure*",
+            "jobs/*.y*l",
+            "tasks/*.y*l",
+            "stages/*.y*l",
+            "steps/*.y*l",
+          },
+        },
+      },
+    },
+  },
   dockerls = {},
   docker_compose_language_service = {},
   terraformls = {},
