@@ -7,5 +7,6 @@ local g = vim.g
 
 opt.foldmethod = "indent"
 opt.foldenable = false
+opt.wrap = true
 -- local o = vim.o
 -- o.cursorlineopt ='both' -- to enable cursorline!
